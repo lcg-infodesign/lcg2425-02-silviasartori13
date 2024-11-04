@@ -66,7 +66,7 @@ function createFlowerGlyph(x, y, size) {
 }
 
 function addBeesAround(x, y, size) {
-  let beeCount = int(random(2, 5));  // Numero casuale di api attorno a ciascun fiore
+  let beeCount = int(random(2, 5));  // Numero casuale di api attorno ai fiori
   
   for (let i = 0; i < beeCount; i++) {
     let angle = random(TWO_PI);
@@ -74,7 +74,7 @@ function addBeesAround(x, y, size) {
     let beeX = x + cos(angle) * distance;
     let beeY = y + sin(angle) * distance;
 
-    drawBee(beeX, beeY, size * 0.15);  // Disegna una piccola ape
+    drawBee(beeX, beeY, size * 0.15);  // Disegna un'ape
   }
 }
 
@@ -83,7 +83,7 @@ function drawBee(x, y, beeSize) {
   translate(x, y);
   
   // Corpo dell'ape
-  ellipse(0, 0, beeSize * 0.6, beeSize);  // Corpo ovale
+  ellipse(0, 0, beeSize * 0.6, beeSize);  // Corpo 
   
   // Ali dell'ape
   ellipse(-beeSize * 0.35, -beeSize * 0.4, beeSize * 0.3, beeSize * 0.2);
